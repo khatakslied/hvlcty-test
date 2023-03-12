@@ -1,0 +1,22 @@
+@import 'variables';
+@import 'ActivityCard';
+@import 'ActivityList';
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: $black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Crimson Text', serif;
+  color: $black;
+  margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+}

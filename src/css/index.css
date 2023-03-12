@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+.activity-card {
+  padding: 20px 0;
+  margin: 10px;
+  background-color: #FDFFFC;
+  background-size: 10px 10px;
+  border: #111111 3px solid; }
+  .activity-card.education {
+    background-image: repeating-linear-gradient(45deg, #9F87AF 0, #9F87AF 0.4px, #FDFFFC 0, #FDFFFC 50%); }
+  .activity-card.recreational {
+    background-image: repeating-linear-gradient(45deg, #ff7733 0, #ff7733 0.4px, #FDFFFC 0, #FDFFFC 50%); }
+  .activity-card.social {
+    background-image: repeating-linear-gradient(45deg, #235789 0, #235789 0.4px, #FDFFFC 0, #FDFFFC 50%); }
+  .activity-card.diy {
+    background-image: repeating-linear-gradient(45deg, #F1D302 0, #F1D302 0.4px, #FDFFFC 0, #FDFFFC 50%); }
+  .activity-card.charity {
+    background-image: repeating-linear-gradient(45deg, #b3fffc 0, #b3fffc 0.4px, #FDFFFC 0, #FDFFFC 50%); }
+  .activity-card.cooking {
+    background-image: repeating-linear-gradient(45deg, #84c318 0, #84c318 0.4px, #FDFFFC 0, #FDFFFC 50%); }
+  .activity-card.relaxation {
+    background-image: repeating-linear-gradient(45deg, #1b998b 0, #1b998b 0.4px, #FDFFFC 0, #FDFFFC 50%); }
+  .activity-card.music {
+    background-image: repeating-linear-gradient(45deg, #383d3b 0, #383d3b 0.4px, #FDFFFC 0, #FDFFFC 50%); }
+  .activity-card.busywork {
+    background-image: repeating-linear-gradient(45deg, #dc0428 0, #dc0428 0.4px, #FDFFFC 0, #FDFFFC 50%); }
+  .activity-card .white-space {
+    background-color: #FDFFFC;
+    display: flex; }
+  .activity-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px; }
+  .activity-card p {
+    font-size: 16px;
+    margin-bottom: 5px; }
+    .activity-card p.type {
+      position: relative;
+      display: inline-block;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 30px;
+      background-color: #111111;
+      color: #FDFFFC; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #111111; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Crimson Text', serif;
+  color: #111111;
+  margin: 0; }
+
+a {
+  text-decoration: none;
+  color: #111111; }

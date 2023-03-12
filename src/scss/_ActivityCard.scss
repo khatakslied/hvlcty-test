@@ -1,0 +1,69 @@
+.activity-card {
+  padding: 20px 0;
+  margin: 10px;
+  background-color: $white;
+  background-size: 10px 10px;
+  border: $black 3px solid;
+
+  &.education {
+    background-image: repeating-linear-gradient(45deg, #9F87AF 0, #9F87AF 0.4px, $white 0, $white 50%);
+  }
+
+  &.recreational {
+    background-image: repeating-linear-gradient(45deg, #ff7733 0, #ff7733 0.4px, $white 0, $white 50%);
+  }
+  
+  &.social {
+    background-image: repeating-linear-gradient(45deg, #235789 0, #235789 0.4px, $white 0, $white 50%);
+  }
+  
+  &.diy {
+    background-image: repeating-linear-gradient(45deg, #F1D302 0, #F1D302 0.4px, $white 0, $white 50%);
+  }
+  
+  &.charity {
+    background-image: repeating-linear-gradient(45deg, #b3fffc 0, #b3fffc 0.4px, $white 0, $white 50%);
+  }
+
+  &.cooking {
+    background-image: repeating-linear-gradient(45deg, #84c318 0, #84c318 0.4px, $white 0, $white 50%);
+  }
+  
+  &.relaxation {
+    background-image: repeating-linear-gradient(45deg, #1b998b 0, #1b998b 0.4px, $white 0, $white 50%);
+  }
+
+  &.music {
+    background-image: repeating-linear-gradient(45deg, #383d3b 0, #383d3b 0.4px, $white 0, $white 50%);
+  }
+
+  &.busywork{
+    background-image: repeating-linear-gradient(45deg, #dc0428 0, #dc0428 0.4px, $white 0, $white 50%);
+  }
+
+  .white-space {
+    background-color: $white;
+    display: flex;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 5px;
+
+    &.type {
+      position: relative;
+      display: inline-block;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 30px;
+      background-color: $black;
+      color: $white;
+    }
+  }
+}
+  
