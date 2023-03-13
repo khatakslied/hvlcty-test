@@ -1,4 +1,4 @@
-<b>Not Another Lazy Sunday</b> is a web application that allows users to generate random activities for a more productive and fulfilling weekend. The app features a user-friendly interface where users can add, edit, and delete activities. Visit the app: https://not-another-lazy-sunday.netlify.app/.
+<b>Not Another Lazy Sunday</b> is a web application that allows users to generate random activities (from https://www.boredapi.com/) for a more productive and fulfilling weekend. The app features a user-friendly interface where users can add, edit, and delete activities. Visit the app: https://not-another-lazy-sunday.netlify.app/.
 
 The app's editor page was developed as a separate page to take advantage of React Router, which allows for a better user experience by enabling seamless navigation between pages without the need for page reloads.
 
