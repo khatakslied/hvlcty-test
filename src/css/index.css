@@ -7,23 +7,23 @@
   background-size: 10px 10px;
   border: #111111 3px solid; }
   .activity-card.education {
-    background-image: repeating-linear-gradient(45deg, #9F87AF 0, #9F87AF 0.4px, #FDFFFC 0, #FDFFFC 50%); }
+    background-image: repeating-linear-gradient(45deg, #6A4C93 0, #6A4C93 0.4px, #FDFFFC 0, #FDFFFC 50%); }
   .activity-card.recreational {
-    background-image: repeating-linear-gradient(45deg, #ff7733 0, #ff7733 0.4px, #FDFFFC 0, #FDFFFC 50%); }
+    background-image: repeating-linear-gradient(45deg, #FF7733 0, #FF7733 0.4px, #FDFFFC 0, #FDFFFC 50%); }
   .activity-card.social {
-    background-image: repeating-linear-gradient(45deg, #235789 0, #235789 0.4px, #FDFFFC 0, #FDFFFC 50%); }
+    background-image: repeating-linear-gradient(45deg, #FC6DAB 0, #FC6DAB 0.4px, #FDFFFC 0, #FDFFFC 50%); }
   .activity-card.diy {
-    background-image: repeating-linear-gradient(45deg, #F1D302 0, #F1D302 0.4px, #FDFFFC 0, #FDFFFC 50%); }
+    background-image: repeating-linear-gradient(45deg, #FFCA3A 0, #FFCA3A 0.4px, #FDFFFC 0, #FDFFFC 50%); }
   .activity-card.charity {
-    background-image: repeating-linear-gradient(45deg, #b3fffc 0, #b3fffc 0.4px, #FDFFFC 0, #FDFFFC 50%); }
+    background-image: repeating-linear-gradient(45deg, #1C90D9 0, #1C90D9 0.4px, #FDFFFC 0, #FDFFFC 50%); }
   .activity-card.cooking {
-    background-image: repeating-linear-gradient(45deg, #84c318 0, #84c318 0.4px, #FDFFFC 0, #FDFFFC 50%); }
+    background-image: repeating-linear-gradient(45deg, #8AC926 0, #8AC926 0.4px, #FDFFFC 0, #FDFFFC 50%); }
   .activity-card.relaxation {
     background-image: repeating-linear-gradient(45deg, #1b998b 0, #1b998b 0.4px, #FDFFFC 0, #FDFFFC 50%); }
   .activity-card.music {
-    background-image: repeating-linear-gradient(45deg, #383d3b 0, #383d3b 0.4px, #FDFFFC 0, #FDFFFC 50%); }
+    background-image: repeating-linear-gradient(45deg, #2D080A 0, #2D080A 0.4px, #FDFFFC 0, #FDFFFC 50%); }
   .activity-card.busywork {
-    background-image: repeating-linear-gradient(45deg, #dc0428 0, #dc0428 0.4px, #FDFFFC 0, #FDFFFC 50%); }
+    background-image: repeating-linear-gradient(45deg, #DF2935 0, #DF2935 0.4px, #FDFFFC 0, #FDFFFC 50%); }
   .activity-card .white-space {
     background-color: #FDFFFC;
     display: flex; }
@@ -31,16 +31,34 @@
     font-size: 20px;
     margin-bottom: 10px; }
   .activity-card p {
-    font-size: 16px;
-    margin-bottom: 5px; }
-    .activity-card p.type {
-      position: relative;
-      display: inline-block;
-      font-weight: bold;
-      padding: 5px 10px;
-      border-radius: 30px;
-      background-color: #111111;
-      color: #FDFFFC; }
+    font-size: 16px; }
+  .activity-card .type {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border: 2px solid #111111;
+    border-radius: 30px;
+    color: #FDFFFC; }
+    .activity-card .type.education {
+      background-color: #6A4C93; }
+    .activity-card .type.recreational {
+      background-color: #FF7733; }
+    .activity-card .type.social {
+      background-color: #FC6DAB; }
+    .activity-card .type.diy {
+      background-color: #FFCA3A; }
+    .activity-card .type.charity {
+      background-color: #1C90D9; }
+    .activity-card .type.cooking {
+      background-color: #8AC926; }
+    .activity-card .type.relaxation {
+      background-color: #1B998B; }
+    .activity-card .type.music {
+      background-color: #2D080A; }
+    .activity-card .type.busywork {
+      background-color: #DF2935; }
+    .activity-card .type svg {
+      margin-right: 5px; }
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -51,6 +69,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #111111;
   margin: 0; }
 
+p {
+  margin: 0; }
+
 a {
   text-decoration: none;
-  color: #111111; }
+  color: #111111;
+  margin: 0; }

@@ -92,7 +92,11 @@ const ActivityEditor = ({ activity, isEdit = false }) => {
           <input
             type="text"
             value={activityName}
-            onChange={(e) => setActivityName(e.target.value)}
+            onChange={(e) => {
+              if (e.target.value.length <= 50) {
+                setActivityName(e.target.value)
+              }
+            }}
             required
           />
         </div>

@@ -6,27 +6,27 @@
   border: $black 3px solid;
 
   &.education {
-    background-image: repeating-linear-gradient(45deg, #9F87AF 0, #9F87AF 0.4px, $white 0, $white 50%);
+    background-image: repeating-linear-gradient(45deg, $education 0, $education 0.4px, $white 0, $white 50%);
   }
 
   &.recreational {
-    background-image: repeating-linear-gradient(45deg, #ff7733 0, #ff7733 0.4px, $white 0, $white 50%);
+    background-image: repeating-linear-gradient(45deg, $recreational 0, $recreational 0.4px, $white 0, $white 50%);
   }
   
   &.social {
-    background-image: repeating-linear-gradient(45deg, #235789 0, #235789 0.4px, $white 0, $white 50%);
+    background-image: repeating-linear-gradient(45deg, $social 0, $social 0.4px, $white 0, $white 50%);
   }
   
   &.diy {
-    background-image: repeating-linear-gradient(45deg, #F1D302 0, #F1D302 0.4px, $white 0, $white 50%);
+    background-image: repeating-linear-gradient(45deg, $diy 0, $diy 0.4px, $white 0, $white 50%);
   }
   
   &.charity {
-    background-image: repeating-linear-gradient(45deg, #b3fffc 0, #b3fffc 0.4px, $white 0, $white 50%);
+    background-image: repeating-linear-gradient(45deg, $charity 0, $charity 0.4px, $white 0, $white 50%);
   }
 
   &.cooking {
-    background-image: repeating-linear-gradient(45deg, #84c318 0, #84c318 0.4px, $white 0, $white 50%);
+    background-image: repeating-linear-gradient(45deg, $cooking 0, $cooking 0.4px, $white 0, $white 50%);
   }
   
   &.relaxation {
@@ -34,11 +34,11 @@
   }
 
   &.music {
-    background-image: repeating-linear-gradient(45deg, #383d3b 0, #383d3b 0.4px, $white 0, $white 50%);
+    background-image: repeating-linear-gradient(45deg, $music 0, $music 0.4px, $white 0, $white 50%);
   }
 
   &.busywork{
-    background-image: repeating-linear-gradient(45deg, #dc0428 0, #dc0428 0.4px, $white 0, $white 50%);
+    background-image: repeating-linear-gradient(45deg, $busywork 0, $busywork 0.4px, $white 0, $white 50%);
   }
 
   .white-space {
@@ -53,16 +53,54 @@
 
   p {
     font-size: 16px;
-    margin-bottom: 5px;
+  }
+  
+  .type {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border: 2px solid $black;
+    border-radius: 30px;
+    color: $white;
 
-    &.type {
-      position: relative;
-      display: inline-block;
-      font-weight: bold;
-      padding: 5px 10px;
-      border-radius: 30px;
-      background-color: $black;
-      color: $white;
+    &.education {
+      background-color: $education;
+    }
+  
+    &.recreational {
+      background-color: $recreational;
+    }
+    
+    &.social {
+      background-color: $social;
+    }
+    
+    &.diy {
+      background-color: $diy;
+    }
+    
+    &.charity {
+      background-color: $charity;
+    }
+  
+    &.cooking {
+      background-color: $cooking;
+    }
+    
+    &.relaxation {
+      background-color: $relaxation;
+    }
+  
+    &.music {
+      background-color: $music;
+    }
+  
+    &.busywork{
+      background-color: $busywork;
+    }
+
+    svg {
+      margin-right: 5px;
     }
   }
 }

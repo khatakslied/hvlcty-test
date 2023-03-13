@@ -39,15 +39,12 @@ const ActivityList = () => {
           ))}
         </div>
       ) : (
-        <p>Loading...</p>
-      )}
-      {activities && activities.length < 4 ? (
-        <ActivityEditor />
-      ) : (
         <div>
-          <h3>Error: inordinate ambition! </h3>
-          <p>Don't you think you're taking on a little too much. It is Sunday after all.</p>
+          <p>Loading...</p>
         </div>
+      )}
+      {activities && activities.length > 0 && activities.length < 6 && (
+        <ActivityEditor />
       )}
     </div>
   );

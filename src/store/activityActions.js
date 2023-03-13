@@ -49,7 +49,12 @@ export const moveActivity = (key, offset) => ({
   payload: { key, offset },
 });
 
-export const updateActivity = (key, updatedActivity) => ({
+export const updateActivity = (updatedActivity) => ({
   type: types.UPDATE_ACTIVITY,
-  payload: { key, updatedActivity },
+  payload: updatedActivity,
+});
+
+export const deleteActivity = (key) => ({
+  type: types.DELETE_ACTIVITY,
+  payload: key,
 });
