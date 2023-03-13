@@ -1,0 +1,11 @@
+.tooltip {
+    background-color: $black;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .tooltip:before {
+    border-top-color: $education;
+  }
+  

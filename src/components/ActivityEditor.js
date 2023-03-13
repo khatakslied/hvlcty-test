@@ -118,31 +118,58 @@ const ActivityEditor = ({ activity, isEdit = false }) => {
         <div>
           <label>Participants:</label>
           <input
-            type="number"
+            type="range"
+            min="1"
+            max="8"
+            step="1"
             value={participants}
+            defaultValue="1"
             onChange={handleParticipantsChange}
             required
           />
+          <span>{participants}</span>
         </div>
         <div>
           <label>Price:</label>
           <input
-            type="number"
+            type="range"
+            min="0"
+            max="1"
             step="0.1"
             value={price}
             onChange={handlePriceChange}
             required
           />
+          <span>
+            {price < 0.1 
+              ? "Free" 
+              : price < 0.3 
+              ? "Cheap" 
+              : price < 0.6 
+              ? "Expensive" 
+              : "Very Expensive"}
+          </span>
         </div>
         <div>
           <label>Accessibility:</label>
           <input
-            type="number"
+            type="range"
+            min="0"
+            max="1"
             step="0.1"
             value={accessibility}
             onChange={handleAccessibilityChange}
             required
           />
+          <span>
+            {accessibility < 0.1
+              ? "Easy-peasy"
+              : accessibility < 0.4
+              ? "Some effort needed"
+              : accessibility < 0.7
+              ? "Significant effort needed"
+              : "Insane effort needed"}
+          </span>
         </div>
         <button type="submit">{isEdit ? "Update Activity" : "Add Activity"}</button>
       </form>

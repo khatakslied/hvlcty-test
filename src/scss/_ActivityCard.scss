@@ -1,9 +1,9 @@
 .activity-card {
   padding: 20px 0;
-  margin: 10px;
   background-color: $white;
   background-size: 10px 10px;
-  border: $black 3px solid;
+  box-shadow: $grey-dark 0px 1px 2px;
+  border-radius: 8px;
 
   &.education {
     background-image: repeating-linear-gradient(45deg, $education 0, $education 0.4px, $white 0, $white 50%);
@@ -44,63 +44,151 @@
   .white-space {
     background-color: $white;
     display: flex;
+    justify-content: space-between;
   }
 
-  h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
+  .info {
+    flex: 1;
+    margin: 8px;
+
+    .activity {
+      display: flex;
+      margin: 8px 0;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+
+      div {
+        display: flex;
+        align-items: center;
+      }
+
+      h3 {
+        font-size: 24px;
+        margin-right: 8px;
+        text-align: left;
+      }
+
+      .type {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 16px;
+        border: 0.5px dashed $white;
+        border-radius: 30px;
+        color: $white;
+    
+        &.education {
+          background-color: $education;
+        }
+      
+        &.recreational {
+          background-color: $recreational;
+        }
+        
+        &.social {
+          background-color: $social;
+        }
+        
+        &.diy {
+          background-color: $diy;
+        }
+        
+        &.charity {
+          background-color: $charity;
+        }
+      
+        &.cooking {
+          background-color: $cooking;
+        }
+        
+        &.relaxation {
+          background-color: $relaxation;
+        }
+      
+        &.music {
+          background-color: $music;
+        }
+      
+        &.busywork{
+          background-color: $busywork;
+        }
+    
+        p {
+          font-size: 12px;
+        }
+    
+        svg {
+          margin-right: 5px;
+        }
+      }
+      
+      .edit{
+        color: $grey;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          color: $black;
+        }
+      }
+    }
   }
 
-  p {
-    font-size: 16px;
+  .arrows{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    margin: 8px;
+
+    svg{
+      color: $grey;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: $black;
+      }
+    }
   }
-  
-  .type {
-    display: inline-flex;
+
+  .details {
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    padding: 8px 16px;
-    border: 2px solid $black;
-    border-radius: 30px;
-    color: $white;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+  
+    .detail {
+      display: flex;
+      align-items: center;
+      margin: 8px;
+      white-space: nowrap;
+      max-width: 100%;
 
-    &.education {
-      background-color: $education;
-    }
-  
-    &.recreational {
-      background-color: $recreational;
-    }
-    
-    &.social {
-      background-color: $social;
-    }
-    
-    &.diy {
-      background-color: $diy;
-    }
-    
-    &.charity {
-      background-color: $charity;
-    }
-  
-    &.cooking {
-      background-color: $cooking;
-    }
-    
-    &.relaxation {
-      background-color: $relaxation;
-    }
-  
-    &.music {
-      background-color: $music;
-    }
-  
-    &.busywork{
-      background-color: $busywork;
-    }
+      &.participants svg{
+        background: $participants;
+        border-radius: 15px 15px 5px 5px;
+        padding: 4px;
+      }
 
-    svg {
-      margin-right: 5px;
+      &.price svg{
+        background: $price;
+        border-radius: 5px;
+        padding: 4px;
+      }
+
+      &.effort svg{
+        background: $effort;
+        border-radius: 15px;
+        padding: 4px;
+      }
+  
+      svg {
+        margin-right: 2px;
+        border: 1.5px solid $grey-dark;
+      }
+  
+      svg:last-of-type {
+        margin-right: 5px;
+      }
     }
   }
 }

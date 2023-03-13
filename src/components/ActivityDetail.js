@@ -1,26 +1,36 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import ActivityEditor from "./ActivityEditor";
+import { deleteActivity } from "../store/activityActions";
+import { SlTrash } from 'react-icons/sl';
 
 const ActivityDetail = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const activity = useSelector((state) =>
     state.activity.activities.find((a) => a.key === id)
   );
+
+  const handleDelete = (key) => {
+    dispatch(deleteActivity(key))
+    navigate("/");
+  }
 
   return (
     <div>
       {activity ? (
         <>
-          {/* <h3>{activity.activity}</h3>
-          <p>Type: {activity.type}</p>
-          <p>Participants: {activity.participants}</p>
-          <p>Price: {activity.price}</p> */}
           <ActivityEditor
             activity={activity}
             isEdit={true}
           />
+          <div>
+            <p>Delete</p>
+            <SlTrash size={24} onClick={() => handleDelete(activity.key)}/>
+          </div>
         </>
       ) : (
         <p>Loading...</p>
