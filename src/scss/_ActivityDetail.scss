@@ -1,0 +1,20 @@
+.activity-detail {
+
+    .delete-button{
+        display: inline-flex;
+        margin-top: 12px;
+        padding: 12px 16px;
+        border-radius: 24px;
+        background-color: $delete;
+        color: $white;
+        font-size: 16px;
+        box-shadow: $grey-dark 0px 1px 2px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: $grey;
+        }
+    }
+}

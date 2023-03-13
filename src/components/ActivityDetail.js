@@ -1,8 +1,9 @@
-import React from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import ActivityEditor from "./ActivityEditor";
+import ConfirmationPopup from "./ConfirmationPopup";
 import { deleteActivity } from "../store/activityActions";
 import { SlTrash } from 'react-icons/sl';
 
@@ -13,24 +14,37 @@ const ActivityDetail = () => {
   const activity = useSelector((state) =>
     state.activity.activities.find((a) => a.key === id)
   );
+  const [showPopup, setShowPopup] = useState(false);
 
-  const handleDelete = (key) => {
-    dispatch(deleteActivity(key))
+  const handleDelete = () => {
+    dispatch(deleteActivity(activity.key));
+    setShowPopup(false);
     navigate("/");
-  }
+  };
 
-  return (
-    <div>
+  const handleCancel = () => {
+    setShowPopup(false);
+  };
+
+return (
+    <div className="activity-detail">
       {activity ? (
         <>
           <ActivityEditor
             activity={activity}
             isEdit={true}
           />
-          <div>
+          <div className="delete-button" onClick={() => setShowPopup(true)}>
             <p>Delete</p>
-            <SlTrash size={24} onClick={() => handleDelete(activity.key)}/>
+            <SlTrash size={24}/>
           </div>
+          {showPopup && (
+            <ConfirmationPopup
+              message="Are you sure you want to delete this activity?"
+              onConfirm={handleDelete}
+              onCancel={handleCancel}
+            />
+          )}
         </>
       ) : (
         <p>Loading...</p>

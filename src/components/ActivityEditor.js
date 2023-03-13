@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addActivity, updateActivity } from "../store/activityActions";
+import { SlArrowLeft } from 'react-icons/sl';
 
 const ActivityEditor = ({ activity, isEdit = false }) => {
   const navigate = useNavigate();
@@ -9,7 +10,7 @@ const ActivityEditor = ({ activity, isEdit = false }) => {
 
   const [activityName, setActivityName] = useState("");
   const [activityType, setActivityType] = useState("");
-  const [participants, setParticipants] = useState(0);
+  const [participants, setParticipants] = useState(1);
   const [price, setPrice] = useState(0);
   const [accessibility, setAccessibility] = useState(0);
   const [key, setKey] = useState("");
@@ -83,12 +84,19 @@ const ActivityEditor = ({ activity, isEdit = false }) => {
     }
   };
 
+  const handleReturn = () => {
+    navigate(-1);
+  };
+
   return (
-    <div>
-      <h2>{isEdit ? "Update Activity" : "Add New Activity"}</h2>
+    <div className="activity-editor">
+      <div className="editor-title">
+        {isEdit && <SlArrowLeft onClick={handleReturn} size={20} className="arrow-button"/>}
+        <h2>{isEdit ? "Update Activity" : "Add New Activity"}</h2>
+      </div>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Activity Name:</label>
+          <label>Activity:</label>
           <input
             type="text"
             value={activityName}
@@ -123,9 +131,9 @@ const ActivityEditor = ({ activity, isEdit = false }) => {
             max="8"
             step="1"
             value={participants}
-            defaultValue="1"
             onChange={handleParticipantsChange}
             required
+            className="participants"
           />
           <span>{participants}</span>
         </div>
@@ -139,6 +147,7 @@ const ActivityEditor = ({ activity, isEdit = false }) => {
             value={price}
             onChange={handlePriceChange}
             required
+            className="price"
           />
           <span>
             {price < 0.1 
@@ -151,7 +160,7 @@ const ActivityEditor = ({ activity, isEdit = false }) => {
           </span>
         </div>
         <div>
-          <label>Accessibility:</label>
+          <label>Effort:</label>
           <input
             type="range"
             min="0"
@@ -160,6 +169,7 @@ const ActivityEditor = ({ activity, isEdit = false }) => {
             value={accessibility}
             onChange={handleAccessibilityChange}
             required
+            className="effort"
           />
           <span>
             {accessibility < 0.1
@@ -168,10 +178,10 @@ const ActivityEditor = ({ activity, isEdit = false }) => {
               ? "Some effort needed"
               : accessibility < 0.7
               ? "Significant effort needed"
-              : "Insane effort needed"}
+              : "Massive effort needed"}
           </span>
         </div>
-        <button type="submit">{isEdit ? "Update Activity" : "Add Activity"}</button>
+        <button type="submit">{isEdit ? "Update" : "Add"}</button>
       </form>
     </div>
   );

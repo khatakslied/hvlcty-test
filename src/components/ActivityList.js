@@ -25,6 +25,11 @@ const ActivityList = () => {
   return (
     <div className="activity-list">
       <h1>Not Another Lazy Sunday</h1>
+      {activities && activities.length < 6 ? (
+        <p>End the Sunday Scaries with this app! Get random ideas for activities to make the most out of your day off. Feeling ambitious? Add your own tasks.</p>
+      ): (
+        <p>Ok, maybe that is a little TOO ambitious. It is Sunday, after all.</p>
+      )}
       {activities ? (
         <div className="activities">
           {activities.map((activity, index) => (
@@ -43,8 +48,11 @@ const ActivityList = () => {
           <p>Loading...</p>
         </div>
       )}
-      {activities && activities.length > 0 && activities.length < 6 && (
-        <ActivityEditor />
+      {activities && activities.length > 0 && activities.length < 6 && <ActivityEditor />}
+      {activities && activities.length >= 6 && (
+        <div>
+          <p>Overly ambitious user, take it easy. Even the best of us need rest!</p>
+        </div>
       )}
     </div>
   );

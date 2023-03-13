@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import { SlArrowDownCircle, SlArrowUpCircle, SlPencil, SlWallet, SlUser, SlPeople, SlEnergy, SlGraduation, SlGameController, SlBubbles, SlWrench, SlPresent, SlFire, SlCup, SlMusicToneAlt, SlHourglass } from 'react-icons/sl';
+import { SlArrowDown, SlArrowUp, SlPencil, SlWallet, SlUser, SlPeople, SlEnergy, SlGraduation, SlGameController, SlBubbles, SlWrench, SlPresent, SlFire, SlCup, SlMusicToneAlt, SlHourglass } from 'react-icons/sl';
 
 const typeIcons = {
   education: SlGraduation,
@@ -87,8 +87,8 @@ const ActivityCard = ({ activity, onMoveUp, onMoveDown, isTop, isBottom }) => {
           </div>
         </div>
         <div className="arrows">
-          {!isTop && <SlArrowUpCircle onClick={onMoveUp} size={32}/>}
-          {!isBottom && <SlArrowDownCircle onClick={onMoveDown} size={32}/>}
+          {!isTop && <SlArrowUp onClick={onMoveUp} size={20} className="arrow-button"/>}
+          {!isBottom && <SlArrowDown onClick={onMoveDown} size={20} className="arrow-button"/>}
         </div>
       </div>
     </div>

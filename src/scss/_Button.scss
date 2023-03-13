@@ -1,0 +1,11 @@
+.arrow-button {
+    color: $grey-dark;
+    transition: all 0.3s ease-in-out;
+    border-radius: 50%;
+    box-shadow: $grey-dark 0px 0.5px 1px;
+    border: 1.5px solid $grey-dark;
+    padding: 8px;
+    &:hover {
+        background-color: $grey-light;
+    }
+}

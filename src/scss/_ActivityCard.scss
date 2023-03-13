@@ -73,7 +73,7 @@
         display: inline-flex;
         align-items: center;
         padding: 8px 16px;
-        border: 0.5px dashed $white;
+        border: 1px dashed $white;
         border-radius: 30px;
         color: $white;
     
@@ -115,11 +115,15 @@
     
         p {
           font-size: 12px;
+          margin-left: 6px;
+        }
+
+        @media only screen and (max-width: 768px) {
+          p {
+            display: none;
+          }
         }
     
-        svg {
-          margin-right: 5px;
-        }
       }
       
       .edit{
@@ -138,13 +142,11 @@
     justify-content: center;
     gap: 8px;
     margin: 8px;
+  }
 
-    svg{
-      color: $grey;
-      transition: all 0.3s ease-in-out;
-      &:hover {
-        color: $black;
-      }
+  @media only screen and (max-width: 768px) {
+    .arrows{
+      display: none;
     }
   }
 
