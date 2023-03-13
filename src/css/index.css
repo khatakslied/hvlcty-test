@@ -30,7 +30,7 @@
     justify-content: space-between; }
   .activity-card .info {
     flex: 1;
-    margin: 8px; }
+    margin: 12px; }
     .activity-card .info .activity {
       display: flex;
       margin: 8px 0;

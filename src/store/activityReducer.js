@@ -54,7 +54,6 @@ const activityReducer = (state = initialState, action) => {
       const activities = [...state.activities];
       const index = activities.findIndex((a) => a.key === updatedActivity.key);
       if (index < 0) {
-        console.log("NO!")
         return state;
       }
       activities[index] = updatedActivity;
@@ -64,7 +63,6 @@ const activityReducer = (state = initialState, action) => {
       };
     }
     case types.DELETE_ACTIVITY: {
-      console.log(action.payload); //
       const key = action.payload;
       const updatedActivities = state.activities.filter(activity => activity.key !== key);
       return {
