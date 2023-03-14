@@ -23,6 +23,7 @@ const ActivityCard = ({ activity, onMoveUp, onMoveDown, isTop, isBottom }) => {
   const ParticipantsIcon = activity.participants > 1 ? SlPeople : SlUser;
 
   const priceRanges = [
+    { maxPrice: 0.1, label: 'Free', numIcons: 0 },
     { maxPrice: 0.3, label: 'Cheap', numIcons: 1 },
     { maxPrice: 0.6, label: 'Expensive', numIcons: 2 },
     { maxPrice: Infinity, label: 'Very Expensive', numIcons: 3 }
@@ -38,6 +39,7 @@ const ActivityCard = ({ activity, onMoveUp, onMoveDown, isTop, isBottom }) => {
   }
 
   const effortRanges = [
+    { maxAccessibility: 0.1, label: 'Easy-peasy', numIcons: 0 },
     { maxAccessibility: 0.4, label: 'Some effort needed', numIcons: 1 },
     { maxAccessibility: 0.7, label: 'Significant effort needed', numIcons: 2 },
     { maxAccessibility: Infinity, label: 'Massive effort needed', numIcons: 3 }
