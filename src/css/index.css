@@ -215,9 +215,11 @@
 
 .activity-list {
   margin: 60px 12px; }
-  .activity-list h1 {
+  .activity-list .title h1 {
     margin: 16px;
     text-align: center; }
+  .activity-list .title p {
+    margin: 8px 12px 36px; }
   .activity-list .activities {
     display: flex;
     flex-direction: column;

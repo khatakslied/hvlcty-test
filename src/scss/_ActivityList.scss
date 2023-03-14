@@ -1,11 +1,18 @@
 .activity-list {
   margin: 60px 12px;
 
-    h1 {
-      margin: 16px;
-      text-align: center;
-    }
+    .title {
+      h1 {
+        margin: 16px;
+        text-align: center;
+      }
   
+      p {
+        margin: 8px 12px 36px;
+      }
+    
+    }
+
     .activities {
       display: flex;
       flex-direction: column;
