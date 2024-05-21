@@ -1,7 +1,8 @@
 import * as types from '../constants/actionTypes';
+import { saveActivities, loadActivities } from '../utils/localStorage';
 
 const initialState = {
-  activities: [],
+  activities: loadActivities() || [],
   loading: false,
   error: '',
 };
@@ -9,6 +10,7 @@ const initialState = {
 const activityReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.FETCH_ACTIVITIES_REQUEST:
+      saveActivities(action.payload);
       return {
         ...state,
         loading: true,
@@ -28,9 +30,11 @@ const activityReducer = (state = initialState, action) => {
         error: action.payload,
       };
     case types.ADD_ACTIVITY:
+      const updatedActivities = [...state.activities, action.payload];
+      saveActivities(updatedActivities);
       return {
         ...state,
-        activities: [...state.activities, action.payload],
+        activities: updatedActivities,
       };
     case types.MOVE_ACTIVITY: {
       const { key, offset } = action.payload;
@@ -44,6 +48,7 @@ const activityReducer = (state = initialState, action) => {
       const newActivity = activities[newIndex];
       activities[index] = newActivity;
       activities[newIndex] = activity;
+      saveActivities(activities);
       return {
         ...state,
         activities,
@@ -57,6 +62,7 @@ const activityReducer = (state = initialState, action) => {
         return state;
       }
       activities[index] = updatedActivity;
+      saveActivities(activities);
       return {
         ...state,
         activities,
@@ -65,6 +71,7 @@ const activityReducer = (state = initialState, action) => {
     case types.DELETE_ACTIVITY: {
       const key = action.payload;
       const updatedActivities = state.activities.filter(activity => activity.key !== key);
+      saveActivities(updatedActivities);
       return {
         ...state,
         activities: updatedActivities,

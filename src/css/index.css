@@ -5,120 +5,161 @@
   background-color: #FDFFFC;
   background-size: 10px 10px;
   box-shadow: #161925 0px 1px 2px;
-  border-radius: 8px; }
-  .activity-card.education {
-    background-image: repeating-linear-gradient(45deg, #6A4C93 0, #6A4C93 0.4px, #FDFFFC 0, #FDFFFC 50%); }
-  .activity-card.recreational {
-    background-image: repeating-linear-gradient(45deg, #FF7733 0, #FF7733 0.4px, #FDFFFC 0, #FDFFFC 50%); }
-  .activity-card.social {
-    background-image: repeating-linear-gradient(45deg, #FC6DAB 0, #FC6DAB 0.4px, #FDFFFC 0, #FDFFFC 50%); }
-  .activity-card.diy {
-    background-image: repeating-linear-gradient(45deg, #FFCA3A 0, #FFCA3A 0.4px, #FDFFFC 0, #FDFFFC 50%); }
-  .activity-card.charity {
-    background-image: repeating-linear-gradient(45deg, #1C90D9 0, #1C90D9 0.4px, #FDFFFC 0, #FDFFFC 50%); }
-  .activity-card.cooking {
-    background-image: repeating-linear-gradient(45deg, #8AC926 0, #8AC926 0.4px, #FDFFFC 0, #FDFFFC 50%); }
-  .activity-card.relaxation {
-    background-image: repeating-linear-gradient(45deg, #1b998b 0, #1b998b 0.4px, #FDFFFC 0, #FDFFFC 50%); }
-  .activity-card.music {
-    background-image: repeating-linear-gradient(45deg, #2D080A 0, #2D080A 0.4px, #FDFFFC 0, #FDFFFC 50%); }
-  .activity-card.busywork {
-    background-image: repeating-linear-gradient(45deg, #DF2935 0, #DF2935 0.4px, #FDFFFC 0, #FDFFFC 50%); }
-  .activity-card .white-space {
-    background-color: #FDFFFC;
-    display: flex;
-    justify-content: space-between; }
-  .activity-card .info {
-    flex: 1;
-    margin: 12px; }
-    .activity-card .info .activity {
-      display: flex;
-      margin: 8px 0;
-      gap: 12px;
-      align-items: center;
-      justify-content: space-between; }
-      .activity-card .info .activity div {
-        display: flex;
-        align-items: center; }
-      .activity-card .info .activity h3 {
-        font-size: 24px;
-        margin-right: 8px;
-        text-align: left; }
-      .activity-card .info .activity .type {
-        display: inline-flex;
-        align-items: center;
-        padding: 8px 16px;
-        border: 1px dashed #FDFFFC;
-        border-radius: 30px;
-        color: #FDFFFC; }
-        .activity-card .info .activity .type.education {
-          background-color: #6A4C93; }
-        .activity-card .info .activity .type.recreational {
-          background-color: #FF7733; }
-        .activity-card .info .activity .type.social {
-          background-color: #FC6DAB; }
-        .activity-card .info .activity .type.diy {
-          background-color: #FFCA3A; }
-        .activity-card .info .activity .type.charity {
-          background-color: #1C90D9; }
-        .activity-card .info .activity .type.cooking {
-          background-color: #8AC926; }
-        .activity-card .info .activity .type.relaxation {
-          background-color: #1B998B; }
-        .activity-card .info .activity .type.music {
-          background-color: #2D080A; }
-        .activity-card .info .activity .type.busywork {
-          background-color: #DF2935; }
-        .activity-card .info .activity .type p {
-          font-size: 12px;
-          margin-left: 6px; }
-        @media only screen and (max-width: 768px) {
-          .activity-card .info .activity .type p {
-            display: none; } }
-      .activity-card .info .activity .edit {
-        color: #666666;
-        transition: all 0.3s ease-in-out; }
-        .activity-card .info .activity .edit:hover {
-          color: #111111; }
+  border-radius: 8px;
+}
+.activity-card.education {
+  background-image: repeating-linear-gradient(45deg, #6A4C93 0, #6A4C93 0.4px, #FDFFFC 0, #FDFFFC 50%);
+}
+.activity-card.recreational {
+  background-image: repeating-linear-gradient(45deg, #FF7733 0, #FF7733 0.4px, #FDFFFC 0, #FDFFFC 50%);
+}
+.activity-card.social {
+  background-image: repeating-linear-gradient(45deg, #FC6DAB 0, #FC6DAB 0.4px, #FDFFFC 0, #FDFFFC 50%);
+}
+.activity-card.diy {
+  background-image: repeating-linear-gradient(45deg, #FFCA3A 0, #FFCA3A 0.4px, #FDFFFC 0, #FDFFFC 50%);
+}
+.activity-card.charity {
+  background-image: repeating-linear-gradient(45deg, #1C90D9 0, #1C90D9 0.4px, #FDFFFC 0, #FDFFFC 50%);
+}
+.activity-card.cooking {
+  background-image: repeating-linear-gradient(45deg, #8AC926 0, #8AC926 0.4px, #FDFFFC 0, #FDFFFC 50%);
+}
+.activity-card.relaxation {
+  background-image: repeating-linear-gradient(45deg, #1b998b 0, #1b998b 0.4px, #FDFFFC 0, #FDFFFC 50%);
+}
+.activity-card.music {
+  background-image: repeating-linear-gradient(45deg, #2D080A 0, #2D080A 0.4px, #FDFFFC 0, #FDFFFC 50%);
+}
+.activity-card.busywork {
+  background-image: repeating-linear-gradient(45deg, #DF2935 0, #DF2935 0.4px, #FDFFFC 0, #FDFFFC 50%);
+}
+.activity-card .white-space {
+  background-color: #FDFFFC;
+  display: flex;
+  justify-content: space-between;
+}
+.activity-card .info {
+  flex: 1;
+  margin: 12px;
+}
+.activity-card .info .activity {
+  display: flex;
+  margin: 8px 0;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+.activity-card .info .activity div {
+  display: flex;
+  align-items: center;
+}
+.activity-card .info .activity h3 {
+  font-size: 24px;
+  margin-right: 8px;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+.activity-card .info .activity .type {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border: 1px dashed #FDFFFC;
+  border-radius: 30px;
+  color: #FDFFFC;
+}
+.activity-card .info .activity .type.education {
+  background-color: #6A4C93;
+}
+.activity-card .info .activity .type.recreational {
+  background-color: #FF7733;
+}
+.activity-card .info .activity .type.social {
+  background-color: #FC6DAB;
+}
+.activity-card .info .activity .type.diy {
+  background-color: #FFCA3A;
+}
+.activity-card .info .activity .type.charity {
+  background-color: #1C90D9;
+}
+.activity-card .info .activity .type.cooking {
+  background-color: #8AC926;
+}
+.activity-card .info .activity .type.relaxation {
+  background-color: #1B998B;
+}
+.activity-card .info .activity .type.music {
+  background-color: #2D080A;
+}
+.activity-card .info .activity .type.busywork {
+  background-color: #DF2935;
+}
+.activity-card .info .activity .type p {
+  font-size: 12px;
+  margin-left: 6px;
+}
+@media only screen and (max-width: 768px) {
+  .activity-card .info .activity .type p {
+    display: none;
+  }
+}
+.activity-card .info .activity .edit {
+  color: #666666;
+  transition: all 0.3s ease-in-out;
+}
+.activity-card .info .activity .edit:hover {
+  color: #111111;
+}
+.activity-card .arrows {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  margin: 8px;
+}
+@media only screen and (max-width: 768px) {
   .activity-card .arrows {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 8px;
-    margin: 8px; }
-  @media only screen and (max-width: 768px) {
-    .activity-card .arrows {
-      display: none; } }
-  .activity-card .details {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 16px; }
-    .activity-card .details .detail {
-      display: flex;
-      align-items: center;
-      margin: 8px;
-      white-space: nowrap;
-      max-width: 100%; }
-      .activity-card .details .detail.participants svg {
-        background: #F3F1F9;
-        border-radius: 15px 15px 5px 5px;
-        padding: 4px; }
-      .activity-card .details .detail.price svg {
-        background: #F9F4F1;
-        border-radius: 5px;
-        padding: 4px; }
-      .activity-card .details .detail.effort svg {
-        background: #FFFDEB;
-        border-radius: 15px;
-        padding: 4px; }
-      .activity-card .details .detail svg {
-        margin-right: 2px;
-        border: 1.5px solid #161925; }
-      .activity-card .details .detail svg:last-of-type {
-        margin-right: 5px; }
+    display: none;
+  }
+}
+.activity-card .details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.activity-card .details .detail {
+  display: flex;
+  align-items: center;
+  margin: 8px;
+  white-space: nowrap;
+  max-width: 100%;
+}
+.activity-card .details .detail.participants svg {
+  background: #F3F1F9;
+  border-radius: 15px 15px 5px 5px;
+  padding: 4px;
+}
+.activity-card .details .detail.price svg {
+  background: #F9F4F1;
+  border-radius: 5px;
+  padding: 4px;
+}
+.activity-card .details .detail.effort svg {
+  background: #FFFDEB;
+  border-radius: 15px;
+  padding: 4px;
+}
+.activity-card .details .detail svg {
+  margin-right: 2px;
+  border: 1.5px solid #161925;
+}
+.activity-card .details .detail svg:last-of-type {
+  margin-right: 5px;
+}
 
 .activity-detail .delete-button {
   display: inline-flex;
@@ -131,9 +172,11 @@
   box-shadow: #161925 0px 1px 2px;
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease-in-out; }
-  .activity-detail .delete-button:hover {
-    background-color: #666666; }
+  transition: all 0.3s ease-in-out;
+}
+.activity-detail .delete-button:hover {
+  background-color: #666666;
+}
 
 .activity-editor {
   padding: 20px 0;
@@ -143,90 +186,109 @@
   border-radius: 8px;
   max-width: 800px;
   min-width: 320px;
-  margin: 24px auto; }
-  .activity-editor .editor-title {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 12px; }
-    .activity-editor .editor-title h2 {
-      flex-grow: 1;
-      text-align: center; }
-    .activity-editor .editor-title .arrow-button {
-      position: absolute; }
-  .activity-editor form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 700px;
-    padding: 12px;
-    margin: 0 auto; }
-    .activity-editor form div {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 12px;
-      width: 100%; }
-      .activity-editor form div label {
-        margin-bottom: 4px;
-        font-weight: bold; }
-      .activity-editor form div input[type="text"] {
-        border-radius: 4px;
-        border: 1.5px solid #161925;
-        padding: 8px;
-        font-size: 16px; }
-      .activity-editor form div input[type="range"] {
-        -webkit-appearance: none;
-        width: 100%;
-        height: 20px;
-        margin-top: 8px;
-        border-radius: 8px;
-        background-color: #EDEDED; }
-      .activity-editor form div input[type="range"]::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        height: 20px;
-        width: 20px;
-        border: 1.5px solid #161925;
-        border-radius: 8px;
-        background-color: #AEAAC5;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out; }
-        .activity-editor form div input[type="range"]::-webkit-slider-thumb:hover {
-          background-color: #666666; }
-      .activity-editor form div select {
-        padding: 8px;
-        border-radius: 4px;
-        border: 1.5px solid #161925;
-        font-size: 16px; }
-      .activity-editor form div span {
-        margin-top: 8px; }
-    .activity-editor form button[type="submit"] {
-      margin-top: 12px;
-      padding: 16px;
-      border-radius: 24px;
-      background-color: #AEAAC5;
-      color: #FDFFFC;
-      font-size: 16px;
-      box-shadow: #161925 0px 1px 2px;
-      border: none;
-      cursor: pointer;
-      transition: all 0.3s ease-in-out; }
-      .activity-editor form button[type="submit"]:hover {
-        background-color: #666666; }
+  margin: 24px auto;
+}
+.activity-editor .editor-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 12px;
+}
+.activity-editor .editor-title h2 {
+  flex-grow: 1;
+  text-align: center;
+}
+.activity-editor .editor-title .arrow-button {
+  position: absolute;
+}
+.activity-editor form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  padding: 12px;
+  margin: 0 auto;
+}
+.activity-editor form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+  width: 100%;
+}
+.activity-editor form div label {
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+.activity-editor form div input[type=text] {
+  border-radius: 4px;
+  border: 1.5px solid #161925;
+  padding: 8px;
+  font-size: 16px;
+}
+.activity-editor form div input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 20px;
+  margin-top: 8px;
+  border-radius: 8px;
+  background-color: #EDEDED;
+}
+.activity-editor form div input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border: 1.5px solid #161925;
+  border-radius: 8px;
+  background-color: #AEAAC5;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.activity-editor form div input[type=range]::-webkit-slider-thumb:hover {
+  background-color: #666666;
+}
+.activity-editor form div select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1.5px solid #161925;
+  font-size: 16px;
+}
+.activity-editor form div span {
+  margin-top: 8px;
+}
+.activity-editor form button[type=submit] {
+  margin-top: 12px;
+  padding: 16px;
+  border-radius: 24px;
+  background-color: #AEAAC5;
+  color: #FDFFFC;
+  font-size: 16px;
+  box-shadow: #161925 0px 1px 2px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.activity-editor form button[type=submit]:hover {
+  background-color: #666666;
+}
 
 .activity-list {
-  margin: 60px 12px; }
-  .activity-list .title h1 {
-    margin: 16px;
-    text-align: center; }
-  .activity-list .title p {
-    margin: 8px 12px 36px; }
-  .activity-list .activities {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 800px;
-    min-width: 320px;
-    margin: 24px auto; }
+  margin: 60px 12px;
+}
+.activity-list .title h1 {
+  margin: 16px;
+  text-align: center;
+}
+.activity-list .title p {
+  margin: 8px 12px 36px;
+}
+.activity-list .activities {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  min-width: 320px;
+  margin: 24px auto;
+}
 
 .arrow-button {
   color: #161925;
@@ -234,9 +296,11 @@
   border-radius: 50%;
   box-shadow: #161925 0px 0.5px 1px;
   border: 1.5px solid #161925;
-  padding: 8px; }
-  .arrow-button:hover {
-    background-color: #EDEDED; }
+  padding: 8px;
+}
+.arrow-button:hover {
+  background-color: #EDEDED;
+}
 
 .popup-mask {
   position: fixed;
@@ -247,58 +311,73 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5); }
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
 .popup {
   background-color: #FDFFFC;
   margin: 8px;
   padding: 16px;
   border-radius: 4px;
-  box-shadow: #161925 0px 1px 2px; }
+  box-shadow: #161925 0px 1px 2px;
+}
 
 .popup-buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px; }
-  .popup-buttons button {
-    margin-top: 12px;
-    padding: 16px;
-    border-radius: 24px;
-    color: #FDFFFC;
-    font-size: 16px;
-    box-shadow: #161925 0px 1px 2px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out; }
-    .popup-buttons button:hover {
-      background-color: #666666; }
-  .popup-buttons .confirm {
-    background-color: #AEAAC5; }
-  .popup-buttons .cancel {
-    background-color: #B5242E; }
+  margin-top: 20px;
+}
+.popup-buttons button {
+  margin-top: 12px;
+  padding: 16px;
+  border-radius: 24px;
+  color: #FDFFFC;
+  font-size: 16px;
+  box-shadow: #161925 0px 1px 2px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.popup-buttons button:hover {
+  background-color: #666666;
+}
+.popup-buttons .confirm {
+  background-color: #AEAAC5;
+}
+.popup-buttons .cancel {
+  background-color: #B5242E;
+}
 
 .tooltip {
   background-color: #111111;
   font-size: 14px;
   padding: 5px 10px;
-  border-radius: 5px; }
+  border-radius: 5px;
+}
 
 .tooltip:before {
-  border-top-color: #6A4C93; }
+  border-top-color: #6A4C93;
+}
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  color: #111111; }
+  font-family: "Open Sans", sans-serif;
+  color: #111111;
+}
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: "Lexend Deca", sans-serif;
   color: #111111;
-  margin: 0; }
+  margin: 0;
+}
 
 p {
-  margin: 0; }
+  margin: 0;
+}
 
 a {
   text-decoration: none;
   color: #111111;
-  margin: 0; }
+  margin: 0;
+}
+
+/*# sourceMappingURL=index.css.map */
